@@ -1,0 +1,654 @@
+:root {
+    /* Color Palette matching Material 3 Expressive (Sticker-book / Pop UI style) */
+    --bg-color: #FDFBF7;
+    /* Beige base */
+    --text-color: #312722;
+    /* Dark brown */
+    --surface-color: #ffffff;
+    --primary-color: #FFB380;
+    /* Pastel Orange */
+    --secondary-color: #FFB5C6;
+    /* Pastel Pink */
+    --tertiary-color: #C8B1E4;
+    /* Lavanda */
+    --accent-dark: #4A3B32;
+
+    /* Variables */
+    --border-radius-sm: 16px;
+    --border-radius-md: 24px;
+    --border-radius-lg: 32px;
+    --border-radius-pill: 9999px;
+
+    --shadow-soft: 0 8px 32px rgba(74, 59, 50, 0.08);
+    --shadow-hover: 0 16px 48px rgba(74, 59, 50, 0.15);
+
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Background Blobs */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opactiy='0.05'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.blob-bg {
+    position: absolute;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.6;
+    animation: float 20s infinite alternate ease-in-out;
+}
+
+.blob-1 {
+    top: -10%;
+    left: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+.blob-2 {
+    top: 20%;
+    right: -10%;
+    width: 40vw;
+    height: 40vw;
+    background: var(--tertiary-color);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    animation-delay: -5s;
+}
+
+.blob-3 {
+    bottom: 10%;
+    left: 20%;
+    width: 60vw;
+    height: 40vw;
+    background: var(--secondary-color);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation-delay: -10s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(50px, 50px) scale(1.1);
+    }
+}
+
+/* Typography Enhancements */
+.highlight {
+    color: var(--accent-dark);
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: -5px;
+    right: -5px;
+    height: 15px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    z-index: -1;
+    transform: rotate(-2deg);
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(253, 251, 247, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid rgba(74, 59, 50, 0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent-dark);
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: #ff7d29;
+    /* vibrant punch */
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius-pill);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    outline: none;
+}
+
+.btn-nav {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: var(--accent-dark);
+    color: white;
+}
+
+.btn-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 59, 50, 0.2);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--accent-dark);
+    box-shadow: 0 4px 0 #e69d6b, 0 8px 16px rgba(255, 179, 128, 0.4);
+    border: 2px solid var(--accent-dark);
+}
+
+.btn-primary:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 #e69d6b, 0 4px 8px rgba(255, 179, 128, 0.4);
+}
+
+.btn-secondary {
+    background-color: var(--surface-color);
+    color: var(--accent-dark);
+    border: 2px solid var(--accent-dark);
+    box-shadow: 0 4px 0 var(--accent-dark);
+}
+
+.btn-secondary:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 var(--accent-dark);
+}
+
+.btn-massive {
+    padding: 1.5rem 3rem;
+    background-color: var(--accent-dark);
+    color: white;
+    border-radius: var(--border-radius-pill);
+    box-shadow: 0 8px 32px rgba(74, 59, 50, 0.3);
+    border: 4px solid var(--tertiary-color);
+}
+
+.btn-massive .btn-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.btn-massive .material-symbols-rounded {
+    font-size: 3rem;
+    background: var(--tertiary-color);
+    color: var(--accent-dark);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.btn-massive .title {
+    display: block;
+    font-family: 'Outfit';
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.btn-massive .subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.btn-massive:hover {
+    transform: scale(1.02) translateY(-4px);
+    box-shadow: 0 12px 40px rgba(74, 59, 50, 0.4);
+    border-color: var(--primary-color);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--accent-dark);
+    color: var(--accent-dark);
+    padding: 0.5rem 1rem;
+}
+
+.btn-outline:hover {
+    background: var(--accent-dark);
+    color: white;
+}
+
+/* Sections */
+.section {
+    padding: 6rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent-dark);
+}
+
+.section-header p {
+    font-size: 1.25rem;
+    opacity: 0.8;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 6rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--accent-dark);
+    font-weight: 700;
+    border-radius: var(--border-radius-pill);
+    border: 2px solid var(--accent-dark);
+    margin-bottom: 1.5rem;
+    box-shadow: 3px 3px 0 var(--accent-dark);
+    transform: rotate(-2deg);
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.hero-visual {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bento Box */
+.bento-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.bento-item {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    border: 2px solid rgba(74, 59, 50, 0.1);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.bento-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(74, 59, 50, 0.2);
+}
+
+.highlight-card {
+    grid-column: span 2;
+    background: var(--tertiary-color);
+    color: var(--accent-dark);
+    border: 2px solid var(--accent-dark);
+}
+
+.icon-massive {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Content Card (Why section) */
+.content-card {
+    background: var(--surface-color);
+    padding: 4rem;
+    border-radius: var(--border-radius-lg);
+    border: 2px solid var(--accent-dark);
+    box-shadow: 8px 8px 0 var(--tertiary-color);
+    font-size: 1.25rem;
+}
+
+.content-card p {
+    margin-bottom: 1.5rem;
+}
+
+/* Timeline / Guide */
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    background: var(--surface-color);
+    padding: 2rem;
+    border-radius: var(--border-radius-md);
+    position: relative;
+    border: 2px dashed rgba(74, 59, 50, 0.2);
+    transition: var(--transition);
+}
+
+.step:hover {
+    border-style: solid;
+    border-color: var(--accent-dark);
+    transform: scale(1.02);
+    box-shadow: var(--shadow-soft);
+}
+
+.step-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-color);
+    color: var(--accent-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit';
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--accent-dark);
+}
+
+.step-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Grid Cards (Controls) */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    padding: 2.5rem;
+    border-radius: var(--border-radius-lg);
+    border: 2px solid var(--accent-dark);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card .material-symbols-rounded {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: white;
+    padding: 0.75rem;
+    border-radius: var(--border-radius-pill);
+    border: 2px solid var(--accent-dark);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.card ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.card li {
+    margin-bottom: 0.75rem;
+}
+
+.card-accent-1 {
+    background-color: var(--primary-color);
+    box-shadow: 6px 6px 0 var(--accent-dark);
+}
+
+.card-accent-2 {
+    background-color: var(--secondary-color);
+    box-shadow: 6px 6px 0 var(--accent-dark);
+}
+
+.card-accent-3 {
+    background-color: var(--tertiary-color);
+    box-shadow: 6px 6px 0 var(--accent-dark);
+}
+
+/* Download Section */
+.download-section {
+    background: var(--accent-dark);
+    color: var(--surface-color);
+    padding: 8rem 4rem;
+    text-align: center;
+    border-radius: 60px 60px 0 0;
+    margin-top: 4rem;
+}
+
+.download-section h2 {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.download-section p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    opacity: 0.9;
+}
+
+.download-main {
+    margin-bottom: 6rem;
+}
+
+.profiles-section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+}
+
+.profile-card {
+    background: rgba(253, 251, 247, 0.05);
+    border: 2px solid rgba(253, 251, 247, 0.2);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.profile-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    background: rgba(253, 251, 247, 0.1);
+}
+
+.game-cover {
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Pseudo covers since we don't have images readily available, let's use gradients */
+.me1 {
+    background-image: url('https://staticdelivery.nexusmods.com/images/237/1751295-1391598301.jpg');
+}
+
+.me2 {
+    background-image: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/02/Mass-Effect-2-10-years-later-classic-.jpg');
+}
+
+.me3 {
+    background-image: url('https://i.redd.it/14-years-ago-today-mass-effect-3-was-released-which-marked-v0-bt5cp4qw2gng1.jpg?width=894&format=pjpg&auto=webp&s=877392da81549993c796d91ac7506c32ddb036ad');
+}
+
+.profile-info {
+    padding: 1.5rem;
+}
+
+.profile-info h4 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.profile-info .btn-outline {
+    width: 100%;
+    border-color: rgba(253, 251, 247, 0.5);
+    color: var(--surface-color);
+}
+
+.profile-info .btn-outline:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--accent-dark);
+}
+
+/* Footer */
+footer {
+    background: var(--accent-dark);
+    color: rgba(253, 251, 247, 0.5);
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(253, 251, 247, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+
+    .hero p {
+        margin: 0 auto 2.5rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .section {
+        padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .download-section h2 {
+        font-size: 3rem;
+    }
+
+    .content-card {
+        padding: 2rem;
+    }
+}

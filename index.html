@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaronteRelayVR | Bring Flat Games to VR</title>
+    <meta name="description"
+        content="A standalone, universal tool to bring ANY game with SBS or TAB output into VR with the best possible quality and latency.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+    <div class="blob-bg blob-1"></div>
+    <div class="blob-bg blob-2"></div>
+    <div class="blob-bg blob-3"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="material-symbols-rounded logo-icon">vrpano</span>
+            <span>CaronteRelayVR</span>
+        </div>
+        <a href="#download" class="btn btn-nav">Get Started</a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <span class="material-symbols-rounded">rocket_launch</span>
+                HUGE UPDATE
+            </div>
+            <h1>Experience Flat Games in <span class="highlight">True VR</span></h1>
+            <p>Welcome to <strong>CaronteRelayVR</strong>. A standalone, universal tool designed to bring ANY game with
+                SBS (Side-by-Side) or TAB (Top-and-Bottom) output into VR with the highest quality and lowest latency.
+            </p>
+            <div class="hero-actions">
+                <a href="#download" class="btn btn-primary"><span class="material-symbols-rounded">download</span>
+                    Download Now</a>
+                <a href="#guide" class="btn btn-secondary"><span class="material-symbols-rounded">route</span> Setup
+                    Guide</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="bento-box">
+                <div class="bento-item highlight-card">
+                    <span class="material-symbols-rounded icon-massive">view_in_ar</span>
+                    <h3>Universal</h3>
+                    <p>Works with any SBS or TAB output.</p>
+                </div>
+                <div class="bento-item">
+                    <span class="material-symbols-rounded icon-massive">speed</span>
+                    <h3>Low Latency</h3>
+                </div>
+                <div class="bento-item">
+                    <span class="material-symbols-rounded icon-massive">extension</span>
+                    <h3>Mod Manager</h3>
+                    <p>Built-in addon support.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="section">
+        <div class="section-header">
+            <h2>Why CaronteRelayVR?</h2>
+            <p>A little background on why this exists.</p>
+        </div>
+        <div class="content-card">
+            <p>As many of you might know, tools like Geo-11 already offer support for output to Katanga or VRScreencap.
+                However, both of those solutions can be complicated and don't always work perfectly. They also seem
+                outdated, and each uses a different runtime.</p>
+            <p>That's exactly why I created <strong>CaronteRelayVR</strong>: I wanted a solution that makes it super
+                easy for absolutely everyone to access their favorite content on their favorite headsets, without the
+                hassle.</p>
+            <p><em>(Please keep in mind that this is the work of a single person learning basic programming as a hobby.
+                    I kindly ask for your patience with any bugs!)</em></p>
+        </div>
+    </section>
+
+    <section id="guide" class="section">
+        <div class="section-header">
+            <h2>How to Setup & Play</h2>
+            <p>The execution method is really simple. Follow these steps:</p>
+        </div>
+        <div class="timeline">
+            <div class="step">
+                <div class="step-icon">1</div>
+                <div class="step-content">
+                    <h3>Prep the Game</h3>
+                    <p>Start your game with any mod that allows 3D stereo output (Geo-11 is great for this, supporting
+                        most DX11 games with TAB or SBS output).</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-icon">2</div>
+                <div class="step-content">
+                    <h3>Launch the App</h3>
+                    <p>Once you're in the game menu, open the <strong>CaronteRelayLauncher</strong>.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-icon">3</div>
+                <div class="step-content">
+                    <h3>Configuration</h3>
+                    <p>Select your language, your runtime (OpenXR or OpenVR), and the capture method.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-icon">4</div>
+                <div class="step-content">
+                    <h3>Viewing Mode</h3>
+                    <p>Choose your visualizer mode. We highly recommend <strong>Immersive Mode</strong> for stability.
+                    </p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-icon">5</div>
+                <div class="step-content">
+                    <h3>Load Addons</h3>
+                    <p>Drag and drop "Caronte Addons" (<code>.nexus</code> config files) into the launcher to enable
+                        tracking for specific games!</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-icon">6</div>
+                <div class="step-content">
+                    <h3>Connect</h3>
+                    <p>Select the game window, choose your output format (e.g., TAB), click Next, put on your headset,
+                        hit <strong>Spacebar</strong>... and you're IN!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="controls" class="section">
+        <div class="section-header">
+            <h2>Controls & Tracking Features</h2>
+            <p>Once inside the game, dial everything in perfectly.</p>
+        </div>
+        <div class="grid-cards">
+            <div class="card card-accent-1">
+                <span class="material-symbols-rounded">tune</span>
+                <h3>Visual Adjustments</h3>
+                <ul>
+                    <li>Use <strong>Numpad +</strong> and <strong>-</strong> to configure your IPD.</li>
+                    <li>If views are misaligned, use <strong>Numpad 1</strong> and <strong>2</strong> until you get a
+                        perfectly clear 3D image.</li>
+                </ul>
+            </div>
+            <div class="card card-accent-2">
+                <span class="material-symbols-rounded">explore</span>
+                <h3>Tracking Modes (Requires Addon)</h3>
+                <p>Press <strong>Enter</strong> in gameplay to initialize tracking!</p>
+                <ul>
+                    <li><strong>Numpad 7 (Safe Mode):</strong> 3DOF with Head Aiming (Enabled by default). Stable,
+                        avoids camera jitter while in cover.</li>
+                    <li><strong>Numpad 8 (Exploration Mode):</strong> 6DOF without aiming (Decoupled from head).</li>
+                    <li><strong>Numpad 9 (Full Immersion):</strong> 6DOF with Head Aiming. (Expect some jittering in
+                        cover—fix in progress!)</li>
+                </ul>
+            </div>
+            <div class="card card-accent-3">
+                <span class="material-symbols-rounded">warning</span>
+                <h3>Known Issues</h3>
+                <p><strong>Performance:</strong> The app is currently very heavy. On an RX 580 it drops to 15 FPS in
+                    some parts. Please test on different PCs and report back!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download-section">
+        <h2>Ready to Dive In?</h2>
+        <p>Get the launcher and start playing with our official test profiles for Mass Effect Legendary Edition!</p>
+
+        <div class="download-main">
+            <button class="btn btn-massive">
+                <div class="btn-content">
+                    <span class="material-symbols-rounded">download</span>
+                    <div>
+                        <span class="title">Download CaronteRelayVR</span>
+                        <span class="subtitle">Latest Version (Windows)</span>
+                    </div>
+                </div>
+            </button>
+        </div>
+
+        <div class="profiles-section">
+            <h3>Test Profiles (Caronte Addons)</h3>
+            <p>Try these profiles to see what can be achieved. Future integrations will include a cloud auto-installer!
+            </p>
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <div class="game-cover me1"></div>
+                    <div class="profile-info">
+                        <h4>Mass Effect 1 (LE)</h4>
+                        <button class="btn btn-outline"><span class="material-symbols-rounded">download</span> Get
+                            Profile</button>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="game-cover me2"></div>
+                    <div class="profile-info">
+                        <h4>Mass Effect 2 (LE)</h4>
+                        <button class="btn btn-outline"><span class="material-symbols-rounded">download</span> Get
+                            Profile</button>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="game-cover me3"></div>
+                    <div class="profile-info">
+                        <h4>Mass Effect 3 (LE)</h4>
+                        <button class="btn btn-outline"><span class="material-symbols-rounded">download</span> Get
+                            Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 CaronteRelayVR by Ellie.N7</p>
+        <p>Pushing the limits of VR modding together.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
