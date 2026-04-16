@@ -529,7 +529,72 @@ h6 {
 }
 
 .download-main {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
+}
+
+/* Dark Content Card for the new Mass Effect section */
+.dark-content-card {
+    background: rgba(253, 251, 247, 0.05);
+    padding: 3rem;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(253, 251, 247, 0.2);
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto 4rem auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.dark-content-card h3 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.dark-content-card h4 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.dark-content-card p {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.dark-content-card ul {
+    list-style-position: inside;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.dark-content-card li {
+    margin-bottom: 0.5rem;
+}
+
+.dark-content-card a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.dark-content-card a:hover {
+    color: var(--surface-color);
+}
+
+.btn-accent-light {
+    background-color: var(--surface-color);
+    color: var(--accent-dark);
+    border: none;
+    display: inline-flex;
+    margin-top: 1rem;
+}
+
+.btn-accent-light:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 .profiles-section h3 {
@@ -648,7 +713,7 @@ footer {
         font-size: 3rem;
     }
 
-    .content-card {
+    .content-card, .dark-content-card {
         padding: 2rem;
     }
 }
