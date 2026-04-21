@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CaronteRelayVR | Bring Flat Games to VR</title>
+    <title>CaronteApp | Bring Flat Games to VR v1.0.0</title>
     <meta name="description"
         content="A standalone, universal tool to bring ANY game with SBS or TAB output into VR with the best possible quality and latency.">
     <link
@@ -20,13 +20,16 @@
     <div class="blob-bg blob-1"></div>
     <div class="blob-bg blob-2"></div>
     <div class="blob-bg blob-3"></div>
+    <div class="static-logo">
+        <span class="material-symbols-rounded logo-icon">vrpano</span>
+        <span>CaronteApp VR</span>
+    </div>
 
-    <nav class="navbar">
-        <div class="logo">
-            <span class="material-symbols-rounded logo-icon">vrpano</span>
-            <span>CaronteRelayVR</span>
-        </div>
-        <a href="#download" class="btn btn-nav">Get Started</a>
+    <nav class="navbar-pill">
+        <a href="#features"><span class="material-symbols-rounded">view_in_ar</span> Features</a>
+        <a href="#guide"><span class="material-symbols-rounded">route</span> Guide</a>
+        <a href="#controls"><span class="material-symbols-rounded">keyboard</span> Controls</a>
+        <a href="#download"><span class="material-symbols-rounded">download</span> Download</a>
     </nav>
 
     <header class="hero">
@@ -36,7 +39,7 @@
                 HUGE UPDATE
             </div>
             <h1>Experience Flat Games in <span class="highlight">True VR</span></h1>
-            <p>Welcome to <strong>CaronteRelayVR</strong>. A standalone, universal tool designed to bring ANY game with
+            <p>Welcome to <strong>CaronteApp</strong>. A standalone, universal tool designed to bring ANY game with
                 SBS (Side-by-Side) or TAB (Top-and-Bottom) output into VR with the highest quality and lowest latency.
             </p>
             <div class="hero-actions">
@@ -68,16 +71,16 @@
 
     <section id="features" class="section">
         <div class="section-header">
-            <h2>Why CaronteRelayVR?</h2>
+            <h2>Why CaronteApp?</h2>
             <p>A little background on why this exists.</p>
         </div>
         <div class="content-card">
             <p>As many of you might know, tools like Geo-11 already offer support for output to Katanga or VRScreencap.
                 However, both of those solutions can be complicated and don't always work perfectly. They also seem
                 outdated, and each uses a different runtime.</p>
-            <p>That's exactly why I created <strong>CaronteRelayVR</strong>: I wanted a solution that makes it super
+            <p>That's exactly why I created <strong>CaronteApp</strong>: I wanted a solution that makes it super
                 easy for absolutely everyone to access their favorite content on their favorite headsets, without the
-                hassle.</p>
+                hassle. We now also offer <strong>native support for Geo11's KatangaVR output</strong>, bringing even better performance and compatibility.</p>
             <p><em>(Please keep in mind that this is the work of a single person learning basic programming as a hobby.
                     I kindly ask for your patience with any bugs!)</em></p>
         </div>
@@ -101,7 +104,7 @@
                 <div class="step-icon">2</div>
                 <div class="step-content">
                     <h3>Launch the App</h3>
-                    <p>Once you're in the game menu, open the <strong>CaronteRelayLauncher</strong>.</p>
+                    <p>Once you're in the game menu, open the <strong>CaronteApp</strong>.</p>
                 </div>
             </div>
             <div class="step">
@@ -114,9 +117,8 @@
             <div class="step">
                 <div class="step-icon">4</div>
                 <div class="step-content">
-                    <h3>Viewing Mode</h3>
-                    <p>Choose your visualizer mode. We highly recommend <strong>Immersive Mode</strong> for stability.
-                    </p>
+                    <h3>View Profile</h3>
+                    <p>Add your <strong>View Profile</strong> to have the best configuration for your visualization, prepared by your community or created by yourself.</p>
                 </div>
             </div>
             <div class="step">
@@ -140,69 +142,157 @@
 
     <section id="controls" class="section">
         <div class="section-header">
-            <h2>Controls & Tracking Features</h2>
+            <h2>Keybindings</h2>
             <p>Once inside the game, dial everything in perfectly.</p>
         </div>
-        <div class="grid-cards">
-            <div class="card card-accent-1">
-                <span class="material-symbols-rounded">tune</span>
-                <h3>Visual Adjustments</h3>
-                <ul>
-                    <li>Use <strong>Numpad +</strong> and <strong>-</strong> to configure your IPD.</li>
-                    <li>If views are misaligned, use <strong>Numpad 1</strong> and <strong>2</strong> until you get a
-                        perfectly clear 3D image.</li>
-                </ul>
-            </div>
-            <div class="card card-accent-2">
-                <span class="material-symbols-rounded">explore</span>
-                <h3>Tracking Modes (Requires Addon)</h3>
-                <p>Press <strong>Enter</strong> in gameplay to initialize tracking!</p>
-                <ul>
-                    <li><strong>Numpad 7 (Safe Mode):</strong> 3DOF with Head Aiming (Enabled by default). Stable,
-                        avoids camera jitter while in cover.</li>
-                    <li><strong>Numpad 8 (Exploration Mode):</strong> 6DOF without aiming (Decoupled from head).</li>
-                    <li><strong>Numpad 9 (Full Immersion):</strong> 6DOF with Head Aiming. (Expect some jittering in
-                        cover—fix in progress!)</li>
-                </ul>
-            </div>
-            <div class="card card-accent-3">
-                <span class="material-symbols-rounded">warning</span>
-                <h3>Known Issues</h3>
-                <p><strong>Performance:</strong> The app is currently very heavy. On an RX 580 it drops to 15 FPS in
-                    some parts. Please test on different PCs and report back!</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="download" class="download-section">
-        <h2>Ready to Dive In?</h2>
-        <p>Get the launcher and start playing!</p>
-
-        <div class="download-main">
-            <a href="https://github.com/EllieWasteland/CaronteLauncherVR/releases/download/v0.1.0/CaronteRelayLauncher.exe" class="btn btn-massive">
-                <div class="btn-content">
-                    <span class="material-symbols-rounded">download</span>
-                    <div>
-                        <span class="title">Download CaronteRelayVR</span>
-                        <span class="subtitle">Latest Version (Windows)</span>
+        <div class="keyboard-container">
+            <div class="keyboard">
+                <div class="kb-row">
+                    <div class="key">Esc</div>
+                    <div class="key">1</div>
+                    <div class="key">2</div>
+                    <div class="key">3</div>
+                    <div class="key">4</div>
+                    <div class="key">5</div>
+                    <div class="key">6</div>
+                    <div class="key">7</div>
+                    <div class="key">8</div>
+                    <div class="key">9</div>
+                    <div class="key">0</div>
+                    <div class="key">-</div>
+                    <div class="key">=</div>
+                    <div class="key kb-wide">Backspace</div>
+                </div>
+                <div class="kb-row">
+                    <div class="key kb-wide">Tab</div>
+                    <div class="key">Q</div>
+                    <div class="key">W</div>
+                    <div class="key">E</div>
+                    <div class="key">R</div>
+                    <div class="key">T</div>
+                    <div class="key">Y</div>
+                    <div class="key">U</div>
+                    <div class="key">I</div>
+                    <div class="key">O</div>
+                    <div class="key">P</div>
+                    <div class="key">[</div>
+                    <div class="key">]</div>
+                    <div class="key kb-wide">\</div>
+                </div>
+                <div class="kb-row">
+                    <div class="key kb-wider">Caps</div>
+                    <div class="key">A</div>
+                    <div class="key">S</div>
+                    <div class="key">D</div>
+                    <div class="key">F</div>
+                    <div class="key">G</div>
+                    <div class="key">H</div>
+                    <div class="key">J</div>
+                    <div class="key">K</div>
+                    <div class="key">L</div>
+                    <div class="key">;</div>
+                    <div class="key">'</div>
+                    <div class="key kb-wider">Enter</div>
+                </div>
+                <div class="kb-row">
+                    <div class="key kb-widest">Shift</div>
+                    <div class="key">Z</div>
+                    <div class="key">X</div>
+                    <div class="key">C</div>
+                    <div class="key active key-misc" data-desc="Toggle Vignette">V</div>
+                    <div class="key">B</div>
+                    <div class="key">N</div>
+                    <div class="key">M</div>
+                    <div class="key">,</div>
+                    <div class="key">.</div>
+                    <div class="key">/</div>
+                    <div class="key kb-widest">Shift</div>
+                </div>
+                <div class="kb-row">
+                    <div class="key kb-wide">Ctrl</div>
+                    <div class="key kb-wide">Win</div>
+                    <div class="key kb-wide">Alt</div>
+                    <div class="key kb-space">Space</div>
+                    <div class="key kb-wide">Alt</div>
+                    <div class="key kb-wide">Win</div>
+                    <div class="key kb-wide">Menu</div>
+                    <div class="key kb-wide">Ctrl</div>
+                </div>
+            </div>
+            
+            <div class="kb-side">
+                <div class="kb-cluster">
+                    <div class="kb-row">
+                        <div class="key active key-stretch" data-desc="Increase Stretch Y">Ins</div>
+                        <div class="key">Home</div>
+                        <div class="key active key-stretch" data-desc="Increase Stretch X">PgUp</div>
+                    </div>
+                    <div class="kb-row">
+                        <div class="key active key-stretch" data-desc="Decrease Stretch Y">Del</div>
+                        <div class="key active key-misc" data-desc="Exit Caronte">End</div>
+                        <div class="key active key-stretch" data-desc="Decrease Stretch X">PgDn</div>
                     </div>
                 </div>
-            </a>
+                <div class="kb-cluster mt-1">
+                    <div class="kb-row" style="justify-content: center;">
+                        <div class="key active key-shift" data-desc="Eye Shift Y +">↑</div>
+                    </div>
+                    <div class="kb-row">
+                        <div class="key active key-shift" data-desc="Eye Shift X -">←</div>
+                        <div class="key active key-shift" data-desc="Eye Shift Y -">↓</div>
+                        <div class="key active key-shift" data-desc="Eye Shift X +">→</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="kb-numpad">
+                <div class="kb-row">
+                    <div class="key">NL</div>
+                    <div class="key">/</div>
+                    <div class="key">*</div>
+                    <div class="key active key-ipd" data-desc="Decrease IPD">-</div>
+                </div>
+                <div class="kb-row">
+                    <div class="key">7</div>
+                    <div class="key">8</div>
+                    <div class="key">9</div>
+                    <div class="key kb-tall active key-ipd" data-desc="Increase IPD">+</div>
+                </div>
+                <div class="kb-row">
+                    <div class="key active key-dist" data-desc="Decrease Distortion X">4</div>
+                    <div class="key active key-dist" data-desc="Increase Distortion X">5</div>
+                    <div class="key active key-dist" data-desc="Increase Distortion Y">6</div>
+                </div>
+                <div class="kb-row">
+                    <div class="key active key-zoom" data-desc="Decrease Zoom">1</div>
+                    <div class="key active key-zoom" data-desc="Increase Zoom">2</div>
+                    <div class="key active key-dist" data-desc="Decrease Distortion Y">3</div>
+                    <div class="key kb-tall active key-misc" data-desc="Initialize Tracking">Ent</div>
+                </div>
+                <div class="kb-row">
+                    <div class="key kb-wider">0</div>
+                    <div class="key">.</div>
+                </div>
+            </div>
+        </div>
+
         </div>
 
         <!-- NEW MASS EFFECT GUIDE SECTION -->
-        <div class="dark-content-card">
+        <div class="dark-content-card" style="margin-top: 4rem;">
             <h3>Looking to play the Mass Effect Trilogy?</h3>
             <p>First, consider installing the game outside of <strong>"Program Files"</strong> to avoid issues with the installer.</p>
             
             <h4>Enhancement Mods (Recommended)</h4>
             <p>Once you have everything ready, I highly suggest installing the FPS mod for the first two games and improving your FOV. Remember that these mods are installed using the <strong>ME3Tweaks Mod Manager</strong> app:</p>
-            <ul>
-                <li><a href="https://www.nexusmods.com/masseffectlegendaryedition/mods/1731?tab=posts" target="_blank">FPS Mod for Mass Effect 1</a></li>
-                <li><a href="https://www.nexusmods.com/masseffectlegendaryedition/mods/2019?tab=posts" target="_blank">FPS Mod for Mass Effect 2</a></li>
-                <li><em>Note: For Mass Effect 3 there isn't an FPS mod yet, but the community is working on it.</em></li>
-                <li><a href="https://www.nexusmods.com/masseffectlegendaryedition/mods/1705" target="_blank">Persistent Mod (For a higher FOV)</a> - Works for all games!</li>
-            </ul>
+            
+            <div class="mod-buttons" style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+                <a href="https://www.nexusmods.com/masseffectlegendaryedition/mods/1731?tab=posts" target="_blank" class="btn btn-secondary"><span class="material-symbols-rounded">download</span> FPS Mod (ME1)</a>
+                <a href="https://www.nexusmods.com/masseffectlegendaryedition/mods/2019?tab=posts" target="_blank" class="btn btn-secondary"><span class="material-symbols-rounded">download</span> FPS Mod (ME2)</a>
+                <a href="https://www.nexusmods.com/masseffectlegendaryedition/mods/1705" target="_blank" class="btn btn-secondary"><span class="material-symbols-rounded">download</span> Persistent Mod (FOV)</a>
+            </div>
+            <p><em>Note: For Mass Effect 3 there isn't an FPS mod yet, but the community is working on it. The Persistent Mod works for all games!</em></p>
 
             <h4>Mandatory Installation</h4>
             <p>While you can play without the previous enhancements without any issues, <strong>it is mandatory</strong> to install this pre-installer for Mass Effect. This package includes the geo11 installation for Mass Effect by DJ-RK and a fix to prevent VR distortions.</p>
@@ -214,7 +304,24 @@
             <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.7;"><em>In case there is any error during the installation, run the app as administrator and try again.</em></p>
 
             <h4>Final Step</h4>
-            <p>After installing the pre-installer, you can open <strong>CaronteLauncher</strong> and start with <strong>Katanga</strong> mode. And finally, load your tracking profile down below!</p>
+            <p>After installing the pre-installer, you can open <strong>CaronteApp</strong> and start with <strong>Katanga</strong> mode. And finally, load your tracking profile down below!</p>
+        </div>
+    </section>
+
+    <section id="download" class="download-section">
+        <h2>Ready to Dive In?</h2>
+        <p>Get the launcher and start playing!</p>
+
+        <div class="download-main">
+            <a href="https://github.com/EllieWasteland/CaronteLauncherVR/releases/download/v0.1.0/CaronteApp.exe" class="btn btn-massive">
+                <div class="btn-content">
+                    <span class="material-symbols-rounded">download</span>
+                    <div>
+                        <span class="title">Download CaronteApp</span>
+                        <span class="subtitle">Latest Version (Windows)</span>
+                    </div>
+                </div>
+            </a>
         </div>
 
         <div class="profiles-section">
@@ -248,7 +355,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 CaronteRelayVR by Ellie.N7</p>
+        <p>&copy; 2026 CaronteApp by Ellie.N7</p>
         <p>Pushing the limits of VR modding together.</p>
     </footer>
 

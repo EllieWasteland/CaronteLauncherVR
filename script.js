@@ -41,4 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(el);
     });
+
+    // Toggle Navbar Pill on scroll
+    const navbarPill = document.querySelector('.navbar-pill');
+    if (navbarPill) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 150) {
+                navbarPill.classList.add('visible');
+            } else {
+                navbarPill.classList.remove('visible');
+            }
+        });
+    }
 });
